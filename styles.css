@@ -103,6 +103,50 @@ main h1 {
 
 
 
+.pill-container {
+    z-index: -99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pill {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: float 3s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) rotate(18deg);
+    }
+    25% {
+        transform: translateY(-20px) translateX(20px) rotate(36deg);
+    }
+    50% {
+        transform: translateY(0) translateX(40px) rotate(54deg);
+    }
+    75% {
+        transform: translateY(20px) translateX(20px) rotate(72deg);
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(90deg);
+    }
+}
+
+
+
+
+
+
+
+
+
 #nav-icon3 {
     z-index: 99999;
     right: 1em;
