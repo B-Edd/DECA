@@ -22,13 +22,14 @@ header img {
 
 
 .menu-open {
+    z-index: 22 !important;
     opacity: 1 !important;
     background-color: #b06a6a;
     display: block !important;
 }
 
 #menu {
-    z-index: 2;
+    z-index: -2;
     transition: all 0.5s ease;
     opacity: 0;
     position: absolute;
@@ -40,6 +41,7 @@ header img {
 }
 
 #menu h2 {
+    font-family: 'monospace';
     transition: background-color 0.3s linear;
     padding: 0.3em 5em;
     padding-bottom: 0.3em;
@@ -77,68 +79,19 @@ main h1 {
     text-align: center;
 }
 
-.animation video {
-    position: absolute;
-    margin-top: -5em;
-    z-index: -10;
-    right: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
-}
-
 .animation h1 {
     position: absolute;
-    margin-left: 6em;
-    margin-top: 1em !important;
-    align-content: center;
-    text-align: center;
-    font-size: 6em;
+    margin-left: 10.7em;
+    margin-top: -1.2em !important;
+    font-size: 3.7em;
+    z-index: -1;
 }
 
-
-
-
-
-
-
-
-.pill-container {
-    z-index: -99999;
+#canvas {
+    z-index: 1;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
-
-.pill {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: float 3s infinite linear;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0) translateX(0) rotate(18deg);
-    }
-    25% {
-        transform: translateY(-20px) translateX(20px) rotate(36deg);
-    }
-    50% {
-        transform: translateY(0) translateX(40px) rotate(54deg);
-    }
-    75% {
-        transform: translateY(20px) translateX(20px) rotate(72deg);
-    }
-    100% {
-        transform: translateY(0) translateX(0) rotate(90deg);
-    }
-}
-
 
 
 
