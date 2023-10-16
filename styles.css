@@ -90,7 +90,7 @@ main h1 {
 .animation h1 {
     position: absolute;
     margin-left: 6em;
-    margin-top: 3em !important;
+    margin-top: 1em !important;
     align-content: center;
     text-align: center;
     font-size: 6em;
