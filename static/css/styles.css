@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-blue : #33ABEF;
+    --dark-blue : #004AAD;
+    --white-green : #D4EFEB;
+    --dusty-pink : #D58A94;
+    --gray-color : #808080;
+}
+
+h4 {
+    font-weight: normal !important;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important; /* removing underlines for hyperlinks */
+}
+
+/* things */
+
+.half-br {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.gray {
+    color: var(--gray-color) !important;
+}
+
+.white-green {
+    color: var(--dark-blue);
+}
+
+.lightblue {
+    color: var(--light-blue) !important;
+}
+
+.darkblue {
+    color: var(--dark-blue) !important;
+}
+
+/* Header */
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: .1em;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+#left {
+    text-decoration: none !important;
+    margin-left: -45em;
+    gap: 1em;
+}
+
+#left a,
+#right a,
+#left a,
+#left a {
+    padding: 1em;
+    transition: color .3s;
+}
+
+#right a:hover,
+#left a:hover {
+    color: var(--dusty-pink) !important;
+}
+#left a:hover {
+    color: #ffb552 !important
+}
+
+/* body */
+
+#signup-link,
+#login-link,
+#login-link1,
+#signup-link1 {
+    cursor: pointer;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: repeat(4, 1em);
+    font-family: Helvetica;
+    margin-top: 3em;
+}
+
+#main-content {
+    display: flex;
+    grid-column: 1 / 1;
+    grid-row: 1;
+    padding: 0 7em 0 7em;
+    flex-wrap: wrap;
+    color: var(--white-green);
+    background-color: var(--light-blue);
+}
+
+#main-content p {
+    font-family: sans-serif;
+    padding-right: 7em;
+    font-size: 1.12em;
+}
+
+#blue {
+    position: absolute;
+    z-index: -10000;
+    margin-top: -30em;
+    background-color: var(--light-blue);
+    padding: 61em 55% 10em 10em;
+}
+
+#main-content h1 {
+    margin-top: .5em;
+    font-size: 4em;
+}
+
+#sl {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 2;
+    grid-row: 15;
+    padding: 0 5em 0 5em;
+    position: sticky;
+    top: 1px;
+}
+
+.login-form-input {
+    padding: 1em;
+    width: 23em;
+}
+
+#login-form-button {
+    background-color: var(--light-blue);
+    color: white;
+    padding: 1em;
+    width: 25.3em;
+    transition: background-color .3s;
+}
+
+#login-form-button:hover {
+    cursor: pointer;
+    background-color: var(--dark-blue);
+}
+
+.signup-form-input {
+    padding: 1em;
+    width: 23em;
+}
+
+
+#signup-form-button,
+#signup-continue-button{
+    background-color: var(--light-blue);
+    color: white;
+    padding: 1em;
+    width: 25.3em;
+    transition: background-color .3s;
+}
+
+#signup-form-button:hover,
+#signup-continue-button:hover {
+    cursor: pointer;
+    background-color: var(--dark-blue);
+}
+
+#login-link:hover,
+#login-link2:hover,
+#signup-link:hover {
+    cursor: pointer;
+}
+
+#signup,
+#login {
+    transition: all .3s;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <!--https://workschedule.net/-->
+    <!--https://sketch.io/sketchpad/-->
+    <head>
+        <title>WorkFlex</title>
+        <link rel="icon" type="image/x-icon" href="../static/images/favicon.png">
+    </head>
+    <body>
+        <header>
+            <div id="imgh">
+                <img src="../static/images/logo3.png" width="125">
+            </div>
+            <div id="left">
+                <a href="#about-us" class="darkblue">About Us</a>
+                <a href="#features" class="darkblue">Features</a>
+            </div>
+            <div id="right">
+                <a id="signup-link1">Sign Up</a>
+                <a id="login-link1">Log In</a>
+            </div>
+        </header>
+        <main>
+            <div id="sl">
+                <div id="login">
+                    <h1>Log In</h1>
+                    <p>or <a class="lightblue" id="signup-link">sign up</a></p>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class="flashes">
+                                {% for message in messages %}
+                                    <li style="color: red;">{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                    <form action="/login" method="post">
+                        <input class="login-form-input" type="email" placeholder="Email" name="login-email" required><br><br>
+                        <input class="login-form-input" type="password" placeholder="Password" name="login-password" required><br><br>
+
+                        <h4>Are you an employee or a supervisor?:</h4><span class="half-br"></span>
+                        <input type="radio" id="login-employee" name="login-es" value="login-employee" required>
+                        <label for="employee" class="gray">Employee</label>
+                        <input type="radio" id="login-supervisor" name="login-es" value="login-supervisor" style="margin-left: 5em;" required>
+                        <label for="supervisor" class="gray" >Supervisor</label><br><br><span class="half-br"></span>
+                        <br><br><br><br>
+
+                        <button id="login-form-button">Login</button>
+                    </form> <!-- change probably -->
+                </div>
+                <div id="signup" style="display: none;">
+                        <form action="/signup" method="post">
+                            <div id="part1">
+                                <h1>Sign Up</h1>
+                                <p>or <a class="lightblue" id="login-link">log in</a></p>
+                                <br>
+                                <input class="signup-form-input" type="text" placeholder="Username" name="signup-username" required><br><br>
+                                <input class="signup-form-input" type="email" placeholder="Email" name="signup-email" required><br><br>
+                                <input class="signup-form-input" type="password" placeholder="Password" name="signup-password" required><br><br><br><br>
+                                <div id="signup-error"></div>
+                                <button type="button" id="signup-continue-button">Continue</button>
+                            </div>
+                            <div id="part2">
+                                <h1>Sign Up</h1>
+                                <p>or <a class="lightblue" id="login-link2">log in</a></p>
+                                <br><br>
+                                <input class="signup-form-input" type="email" placeholder="Supervisor Email ⁽ᴸᵉᵃᵛᵉ ᵇˡᵃⁿᵏ ᶦᶠ ʸᵒᵘ'ʳᵉ ᵃ ˢᵘᵖᵉʳᵛᶦˢᵒʳ⁾" name="signup-manager-email"><br><br><br>
+                                <h4>Are you an employee or a supervisor?:</h4><span class="half-br"></span>
+                                <input type="radio" id="employee" name="signup-es" value="employee" required>
+                                <label for="employee" class="gray">Employee</label>
+                                <input type="radio" id="supervisor" name="signup-es" value="supervisor" style="margin-left: 5em;" required>
+                                <label for="supervisor" class="gray" >Supervisor</label><br><br><span class="half-br"></span><br>
+                                <button type="submit" id="signup-form-button">Sign Up</button>
+                            </div>
+                        </form> <!-- change probably -->
+                    </div>
+                </div>
+            <div id="blue"> </div>
+            <div id="main-content">
+                <h2>WorkFlex</h2>
+                <br>
+                <h1>Empowering Your Work-Life Balance</h1>
+                <br><br><br><br>
+                <p class="white-green">Revolutionize your productivity with our smart workspace that seamlessly integrates tasks, projects,
+                    and collaboration. Customize your schedule, collaborate effortlessly with supervisors, and enjoy
+                    transparent time management. WorkFlex: where empowerment meets balance. Sign up today and redefine
+                    your work-life harmony!</p>
+            </div>
+            <div id="content">
+
+            </div>
+        </main>
+    </body>
+</html>
+<script src="../static/javascript/script.js"></script>
+<link rel="stylesheet" href="../static/css/styles.css">

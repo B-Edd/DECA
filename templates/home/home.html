@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <!--https://workschedule.net/-->
+    <head>
+        <title>Work Scheduler</title>
+        <script src="../../static/javascript/home.js"></script>
+        <link rel="stylesheet" href="../../static/css/home.css">
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flask Calendar</title>
+        <!-- Include jQuery first -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Include FullCalendar CSS and JS from CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+        </header>
+        <div id="sidenav">
+            <h2><a href="{{ url_for('bp.home') }}">Home</a></h2>
+            <h2><a href="{{ url_for('bp.calendar') }}">Calendar</a></h2>
+            <h2><a href="{{ url_for('bp.rwtc') }}">Request work time change</a></h2>
+        </div>
+        <main>
+            <div id="calendar"></div>
+            <div id="announcements">
+                <h1>Announcements</h1>
+            </div>
+        </main>
+    </body>
+</html>
+
